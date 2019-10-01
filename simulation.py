@@ -101,7 +101,11 @@ def print_many_servers_result(servers_dict):
         print('*' * 65)
 
     print('\n')
+    print('#' * 100)
+    print('\n')
     print(f'The total average wait time is {average} seconds for a request_list of {sum(sum_length_list)} size using {server_count} servers')
+    print('\n')
+    print('#' * 100)
 
 def simulateManyServers(request_list, n_servers):
     """
@@ -188,11 +192,11 @@ def simulateOneServer(request_list):
 
     wait_time = sum(processed_list) / len(processed_list)
 
-    print('*' * 70)
+    print('#' * 70)
     print('\n')
-    print(f'The Average wait time is {wait_time} for a request_list of {len(request_list)} size')
+    print(f'The average wait time is {wait_time} for a request_list of {len(request_list)} size')
     print('\n')
-    print('*' * 70)
+    print('#' * 70)
 
 def main():
     """
