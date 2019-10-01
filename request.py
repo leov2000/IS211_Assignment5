@@ -1,9 +1,7 @@
 class Request:
 
-    def __init__(self, request_item):
-        [time_stamp, _, seconds_to_process] = request_item
-
-        self.timestamp = time_stamp
+    def __init__(self, request_simulation, seconds_to_process):
+        self.timestamp = request_simulation
         self.seconds_to_process = seconds_to_process
 
     def get_stamp(self):
@@ -13,4 +11,4 @@ class Request:
         return self.seconds_to_process
 
     def wait_time(self, current_time):
-        return current_time - self.seconds_to_process
+        return current_time - self.timestamp
