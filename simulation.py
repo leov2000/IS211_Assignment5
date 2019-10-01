@@ -5,7 +5,6 @@ import urllib.request as urllib
 import logging
 import argparse
 import csv
-import pprint
 
 def get_data(url):
     """
@@ -104,7 +103,6 @@ def print_many_servers_result(servers_dict):
     print('\n')
     print(f'The total average wait time is {average} seconds for a request_list of {sum(sum_length_list)} size using {server_count} servers')
 
-
 def simulateManyServers(request_list, n_servers):
     """
     A primary function used to deligate creating queues for requests and servers.
@@ -154,7 +152,6 @@ def simulateManyServers(request_list, n_servers):
 
     print_many_servers_result(processed_dict)
     
-
 def simulateOneServer(request_list):
     """
     A primary function used to deligate creating queues for requests.
@@ -196,7 +193,6 @@ def simulateOneServer(request_list):
     print(f'The Average wait time is {wait_time} for a request_list of {len(request_list)} size')
     print('\n')
     print('*' * 70)
-
 
 def main():
     """
