@@ -18,7 +18,6 @@ class Server:
         else:
             return False
 
-
     def start_next(self, new_req):
         self.current_req = new_req
         self.time_remaining = new_req.get_request()

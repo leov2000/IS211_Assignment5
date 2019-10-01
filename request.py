@@ -1,5 +1,4 @@
 class Request:
-
     def __init__(self, request_simulation, seconds_to_process):
         self.timestamp = request_simulation
         self.seconds_to_process = seconds_to_process
