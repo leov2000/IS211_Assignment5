@@ -1,8 +1,8 @@
 class Server:
-    def __init__(self):
+    def __init__(self, host_name=None):
         self.current_req = None
         self.time_remaining = 0
-        self.boot_strapped = False 
+        self.host_name = host_name
 
     def tick(self):
         if self.current_req != None:
@@ -17,10 +17,6 @@ class Server:
 
         else:
             return False
-
-    def first_request(self, req):
-        self.current_req = req
-        self.boot_strapped = True 
 
 
     def start_next(self, new_req):
